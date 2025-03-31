@@ -1,0 +1,250 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
+:root {
+	--default-color: #ac4142;
+	--color-orange: #ffac00;
+	--font-monospaced: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	/* --font-sans: 'Open Sans'; */
+}
+
+/* Page full height */
+html, body {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+	background: #151515 url("../images/bkg.png") 0 0;
+}
+
+body {
+	flex:1;
+	color: #fff;
+	font-family: var(--font-monospaced);
+}
+
+.entry-content {
+	/* font-family: var(--font-sans); */
+}
+
+a {
+	color: var(--default-color);
+	text-decoration: none;
+  	transition: color 0.5s;
+}
+
+#content {
+	width: 90%;
+	max-width: 860px;
+	margin: auto;
+	margin-top: 60px;
+	-webkit-font-smoothing: antialiased;
+}
+
+header {
+	height: 50px;
+	box-sizing: border-box;
+	line-height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding: 0 10px;
+
+	background: #151515 url("../images/bkg.png") 0 0;
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	color: var(--default-color);
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+	letter-spacing: -1px;
+	-webkit-font-smoothing: antialiased;
+
+	border-bottom: 1px solid;
+	border-color: var(--default-color);
+}
+
+header:before {
+	color: var(--color-orange);
+	content: "λ ";
+	font-size: 30px;
+}
+
+#site-title, #main-nav {
+	display: inline-block;
+}
+#site-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--default-color);
+}
+
+/* Navbar */
+#main-nav {float: right}
+
+#toggle-menu {
+	width: 24px;
+	height: 24px;
+	display: none;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 24px;
+	z-index: 200;
+	position: relative;
+}
+
+/* Footer */
+
+footer {
+	border-top: 1px solid;
+	border-color: var(--default-color);
+  	padding: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	/*margin-top: 20px;*/
+
+	/* Footer fixed height
+	height: 75px;
+	max-height: 75px;*/
+	margin-top: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+#social_links {
+	text-align: center;
+}
+
+#social_links > a {
+	font-size: 1.5em;
+}
+
+img {max-width: 100%; height: auto}
+
+/* Video iframe */
+
+div.video {
+	position: relative;
+	width: 100%;
+	padding-bottom:56.25%;
+}
+
+div.video > iframe {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+	top: 0;
+	left: 0;
+}
+
+table {width: 100%}
+table th {text-align: left}
+
+a:hover {
+	/*color: #7FDBFF !important;*/
+	color: var(--color-orange) !important;
+}
+
+pre {
+	 white-space: pre-wrap;
+}
+
+/* Entries list */
+
+.entry {margin-bottom: 20px}
+.entry .entry-title {
+	font-size: 1.8em;
+	display: block;
+}
+.entry .entry-date {
+	color: #aaa;
+	display: block;
+	margin: 5px 0;
+}
+
+/* Pagination */
+
+#pagination {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#pagination a, #pagination span {
+	width: 24px;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+}
+
+#pagination .actual-page {font-weight: bold;}
+#pagination .inactive {color: #aaa}
+
+@media (max-width: 768px){
+	header {
+		height: 44px;
+		line-height: 34px;
+	}
+	
+	#main-nav {
+		position: fixed;
+		float: none;
+		display: block;
+		left: -180px;
+		top: 0;
+		background-color: #111;
+		line-height: initial;
+		width: 180px;
+		height: 100%;
+		padding: 40px 10px 10px;
+		box-sizing: border-box;
+		z-index: 100;
+		transition: left 1s;
+	}
+	
+	#main-nav > a {
+		display: block;
+		margin-bottom: 5px;
+	}
+	#toggle-menu {
+		display: inline-block;
+	}
+	
+	#toggle-menu::before {
+		font-family: 'Fontello';
+		content: '\F0C9';
+		color: #fff;
+		font-size: 18px;
+	}
+	
+	#site-title {margin-left: 5px;}
+	
+	#main-nav.open {left: 0;}
+	#toggle-menu.open {z-index: 200}
+	#toggle-menu.open::before {content: '\E800'}
+	
+	/* tables */
+	table tbody, table thead, table tr,
+	table th, table td {display: block}
+	table thead {
+		position: absolute;
+		top: -9999px;
+	}
+	
+	table tr {
+		border-bottom: 1px solid;
+		padding: 10px 0
+	}
+	
+	table td {
+		position: relative;
+		padding-left: 45%;
+	}
+	
+	tbody td:before {
+		content: attr(data-title);
+		position: absolute;
+		left: 0;
+		display: block;
+   		font-weight: bold;
+		width: 40%;
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,22 @@
+<footer>
+	{% if site.social_links %}
+	<nav id="social_links">
+		{% if.site.rss%}<a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" class="icon-rss"></a>{% endif %}
+		{% if site.github %}<a href="{{site.github}}" class="icon-github" target="_black" title="Github"></a>{% endif %}
+		{% if site.gitlab %}<a href="{{site.gitlab}}" class="icon-gitlab" target="_black" title="GitLab"></a>{% endif %}
+		{% if site.git %}<a href="{{site.git}}" class="icon-git" target="_black" title="Git"></a>{% endif %}
+		{% if site.linkedin %}<a href="{{site.linkedin}}" class="icon-linkedin" target="_black" title="Linkedin"></a>{% endif %}
+		{% if site.reedit %}<a href="{{site.reddit}}" class="icon-reedit" target="_black" title="Reedit"></a>{% endif %}
+		{% if site.spotify %}<a href="{{site.spotify}}" class="icon-spotify" target="_black" title="Spotify"></a>{% endif %}
+		{% if site.twitch %}<a href="{{site.twitch}}" class="icon-twitch" target="_black" title="Twitch"></a>{% endif %}
+		{% if site.twitter %}<a href="{{site.twitter}}" class="icon-twitter" target="_black" title="Twitter"></a>{% endif %}
+		{% if site.youtube %}<a href="{{site.youtube}}" class="icon-youtube" target="_black" title="Youtube"></a>{% endif %}
+	</nav>
+	{% endif %}
+	<!-- <p id="credits">
+		Powered by Jekyll.
+	</p> -->
+</footer>
+</body>
+<script type="text/javascript" src="{{'/assets/js/menu.js' | prepend: site.url }}"></script>
+</html>
