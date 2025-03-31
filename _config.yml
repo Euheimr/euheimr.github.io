@@ -36,7 +36,8 @@ twitch: https://www.twitch.tv/euheimr
 # youtube:
 
 # Build settings
-theme: jekyll-simple-dark
+#theme: jekyll-simple-dark
+remote_theme: jekyll-simple-dark
 
 plugins:
   - jekyll-paginate
