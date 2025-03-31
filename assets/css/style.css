@@ -4,6 +4,8 @@
 	--default-color: #ac4142;
 	--color-orange: #ffac00;
 	--font-monospaced: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	--header-height: 55px;
+	--header-line-height: 50px;
 	/* --font-sans: 'Open Sans'; */
 }
 
@@ -34,16 +36,16 @@ a {
 
 #content {
 	width: 90%;
-	max-width: 860px;
+	max-width: 900px;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 50px;
 	-webkit-font-smoothing: antialiased;
 }
 
 header {
-	height: 50px;
+	height: var(--header-height);
 	box-sizing: border-box;
-	line-height: 50px;
+	line-height: var(--header-line-height);
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -96,14 +98,15 @@ header:before {
 footer {
 	border-top: 1px solid;
 	border-color: var(--default-color);
-  	padding: 10px;
+  	padding: 15px;
 	text-align: center;
+
 	font-size: 0.9em;
 	/*margin-top: 20px;*/
 
-	/* Footer fixed height
-	height: 75px;
-	max-height: 75px;*/
+	/* Footer fixed height */
+	/*height: 50px;
+	max-height: 50px; */
 	margin-top: auto;
 	width: 100%;
 	overflow: hidden;
@@ -151,10 +154,12 @@ pre {
 
 .entry {margin-bottom: 20px}
 .entry .entry-title {
+	padding-top: 25px;
 	font-size: 1.8em;
 	display: block;
 	color: var(--default-color);
 }
+
 .entry .entry-date {
 	color: #aaa;
 	display: block;
@@ -180,10 +185,10 @@ pre {
 
 @media (max-width: 768px){
 	header {
-		height: 44px;
-		line-height: 34px;
+		height: var(--header-height);
+		line-height: var(--header-line-height);
 	}
-	
+
 	#main-nav {
 		position: fixed;
 		float: none;
@@ -209,7 +214,7 @@ pre {
 	}
 	
 	#toggle-menu::before {
-		font-family: 'Fontello';
+		font-family: var(--font-monospaced);
 		content: '\F0C9';
 		color: #fff;
 		font-size: 18px;
