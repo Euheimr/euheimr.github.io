@@ -4,28 +4,33 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hey there!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+_This website serves as a central area for me to write about things that interest me and stuff I'm working on._
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+<br>
 
+_So... about me_:
 
-[jekyll-organization]: https://github.com/jekyll
+- [Dungeons & Dragons](https://www.dndbeyond.com/) player (D&D 3e through 5e) and have DM'd a homebrew 5e [Shadowfell](https://forgottenrealms.fandom.com/wiki/Shadowfell) campaign
+- Hobbyist game designer & indie gamedev
+- Electrician & general mechanic
+- Programmer by hobby & trade
+- [Golang](https://go.dev/) is my favorite programming language
+- [Real-time Strategy (RTS)](https://en.wikipedia.org/wiki/Real-time_strategy) games are my favorite
+- [Total Annihilation (1999)](https://en.wikipedia.org/wiki/Total_Annihilation) remains as my favorite RTS game of all time
 
----
+<br>
 
-### Testing code highlighting here...
+I will publish my own RTS game someday.
 
-{% highlight go %}
-package main
+<br>
 
-func main() {
-    fmt.Println("Hello World")
-}
+_I also make some mildly interesting stuff_:
 
-{% endhighlight %}
+- projects on [Github]({{ site.github }})
+- minecraft datapacks / mods on [Modrinth](https://modrinth.com/user/Euheimr)
+
+<br>
+
+Sometimes I stream games, gamedev and programming on [Twitch.tv]({{ site.twitch }})!
