@@ -4,18 +4,18 @@ source "https://rubygems.org"
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
 #
 #     bundle exec jekyll serve
-gem "jekyll-simple-dark"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-remote-theme", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-seo-tag"
+  gem "github-pages", "~> 232"
   gem "jekyll-feed", "~> 0.12"
-  gem "kramdown-syntax-coderay", "~> 1.0"
+  gem "jekyll-sass-converter", "~> 1.5.2"
+  gem "jekyll-remote-theme", "~> 0.4.3"
+  gem "jekyll-simple-dark"
+  gem "jekyll-seo-tag"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
