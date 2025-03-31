@@ -22,10 +22,6 @@ body {
 	font-family: var(--font-monospaced);
 }
 
-.entry-title {
-	color: var(--default-color);
-}
-
 .entry-content {
 	/* font-family: var(--font-sans); */
 }
@@ -157,6 +153,7 @@ pre {
 .entry .entry-title {
 	font-size: 1.8em;
 	display: block;
+	color: var(--default-color);
 }
 .entry .entry-date {
 	color: #aaa;
