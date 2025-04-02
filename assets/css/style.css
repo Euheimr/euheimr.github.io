@@ -334,10 +334,10 @@ pre {
 @media (min-width: 1000px) {
 
     header {
-        padding-left: calc((100vw - 1000px) * -140 / (768 - 1000));
+        padding-left: calc((100vw - 1000px) * -100 / (768 - 1000));
     }
 
     #main-nav {
-        padding-right: calc((100vw - 1000px) * -140 / (768 - 1000));
+        padding-right: calc((100vw - 1000px) * -100 / (768 - 1000));
     }
 }
