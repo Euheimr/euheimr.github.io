@@ -243,11 +243,11 @@ pre {
         position: fixed;
         float: none;
         display: block;
-        right: -30%;
+        right: -40%;
         top: 0;
         background-color: #111;
         line-height: initial;
-        width: 30%;
+        width: 40%;
         min-width: 120px;
         height: 100%;
         padding-top: var(--header-height);
