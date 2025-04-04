@@ -3,8 +3,10 @@
 
 :root {
     --default-color: #ac4142;
+    --default-text-color: #eee;
     --color-orange: #ffac00;
     --color-purple: #ff00ff;
+    --color-light-blue: #6a9fb5;
     --font-monospaced: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     --font-default: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --header-height: 50px;
@@ -25,7 +27,7 @@ html, body {
 
 body {
     flex:1;
-    color: #fff;
+    color: var(--default-text-color);
     font-family: var(--font-default);
 }
 
@@ -140,11 +142,54 @@ header {
 .entry .entry-date {
     color: #aab;
     display: block;
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
-.entry-content {
-    /* font-family: var(--font-sans); */
+.entry-content h2, .entry-content h3, .entry-content h4 {
+    padding-top: 1em;
+}
+
+.entry-content h1 {
+    margin: 10px 2px;
+    padding-top: 1em;
+}
+
+.entry-content h2 {
+    margin: 8px 5px;
+    padding-top: 1em;
+}
+
+.entry-content h3 {
+    margin: 4px 10px;
+    padding-top: 1em;
+}
+
+.entry-content h4 {
+    margin: 2px 15px;
+    padding-top: 0.8em;
+}
+
+.entry-content p {
+    padding-top: 1em;
+    margin: 0 20px;
+    line-height: 1.5;
+}
+
+.entry-content ul, .entry-content ol {
+    margin: 5px 8px;
+    line-height: 1.5;
+}
+
+/* override the background of code text so it doesn't meld with page background */
+code {
+    background: #000;
+}
+
+/* italic text overrides */
+em {}
+
+strong { /* bold text overrides */
+    color: var(--color-light-blue);
 }
 
 
@@ -184,8 +229,20 @@ a:hover {
 
 
 /* Tables */
-table {width: 100%}
-table th {text-align: left}
+table {
+    width: 100%;
+}
+table th {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    text-decoration-line: underline;
+    border: 1px solid var(--default-color);
+}
+table td {
+    text-align: left;
+    border: 1px dashed var(--default-color);
+}
 
 
 /* Images */
@@ -296,7 +353,9 @@ pre {
 
     /* tables */
     table tbody, table thead, table tr,
-    table th, table td {display: block}
+    table th, table td {
+        display: block
+    }
     table thead {
         position: absolute;
         top: -9999px;
@@ -317,9 +376,13 @@ pre {
         position: absolute;
         left: 0;
         display: block;
-        font-weight: bold;
+
         width: 40%;
         white-space: nowrap;
+
+        font-size: 1.1em;
+        font-weight: bold;
+        text-decoration-line: underline;
     }
 }
 
