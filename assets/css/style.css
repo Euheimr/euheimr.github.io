@@ -134,7 +134,7 @@ header {
 .entry .entry-header {}
 
 .entry .entry-title {
-    font-size: 1.8em;
+    font-size: 2.5em;
     display: block;
     color: var(--default-color);
 }
@@ -145,37 +145,37 @@ header {
     margin: 5px 10px;
 }
 
-.entry-content h2, .entry-content h3, .entry-content h4 {
+h2, h3, h4 {
     padding-top: 1em;
 }
 
-.entry-content h1 {
+h1 {
     margin: 10px 2px;
     padding-top: 1em;
 }
 
-.entry-content h2 {
+h2 {
     margin: 8px 5px;
     padding-top: 1em;
 }
 
-.entry-content h3 {
+h3 {
     margin: 4px 10px;
     padding-top: 1em;
 }
 
-.entry-content h4 {
+h4 {
     margin: 2px 15px;
     padding-top: 0.8em;
 }
 
-.entry-content p {
+p {
     padding-top: 1em;
     margin: 0 20px;
     line-height: 1.5;
 }
 
-.entry-content ul, .entry-content ol {
+ul, ol {
     margin: 5px 8px;
     line-height: 1.5;
 }
